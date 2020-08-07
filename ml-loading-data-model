@@ -1,0 +1,17 @@
+https://www.udemy.com/course/python-sql-tableau-integrating-python-sql-and-tableau/learn/lecture/12989086#questions
+
+from absenteeism_module import *
+pd.read_csv('Absenteeism_new_data.csv')
+
+model = absenteeism_model('model','scaler')
+model.load_and_clean_data('Absenteeism_new_data.csv')
+model.predicted_outputs()
+
+#all the files must be in the same directory:model,scaler,csv-file,module file
+
+from absenteeism_module import *
+model = absenteeism_model('model','scaler')
+model.load_and_clean_data('Absenteeism_new_data.csv')
+
+#store model predicted outputs in a object called df_new_obs
+model.predicted_outputs()
